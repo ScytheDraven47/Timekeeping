@@ -1,0 +1,84 @@
+/* Colors */
+html {
+	background-color: #EEE;
+}
+
+/* Fonts */
+body, input {
+	font-family: Verdana, Arial, sans-serif;
+}
+
+input[type="number"] {
+	text-align: right;
+}
+
+#resetButtons label {
+	vertical-align: middle;
+}
+
+/* Layout */
+main {
+	width: 80%;
+	margin: 0 auto;
+}
+
+input, h2, p {
+	padding: 5px;		
+	margin: 10px 0;
+}
+
+input[type="number"] {
+	width: 80%;
+	margin-left: 10%;
+}
+
+#buttons, #resetButtons, #resultTable {
+	width: 100%;
+}
+
+/* Table */
+#resultTable {
+	margin-top: 10px;
+	height: 25em;
+	overflow: auto;
+}
+table {
+	width: 100%;
+	background-color: #CCC
+}
+table, thead, tbody, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+	padding: 0.4em;
+}
+
+.earlyText {
+	color: green;
+}
+.lateText {
+	color: red;
+}
+tr.early {
+	background-color: lightgreen;
+}
+tr.late {
+	background-color: lightpink;
+}
+tr.fixed {
+	background-color: #FFB600;
+}
+
+/* Flex */
+#clock, #time, #buttons, #resetButtons, #outputs {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+#buttons input, #resetButtons input{
+	flex: 1;
+}
+#clockDispBtns {
+	display: flex;
+	flex-direction: column;
+}

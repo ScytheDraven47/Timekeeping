@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="src/scripting.js"></script>
+	<link rel="stylesheet" href="src/stylesheet.css">
+	<title>Timekeeping</title>
+</head>
+<body>	
+	<main>
+		<div id="resetButtons">
+			<label id="orgODO"></label>
+			<input type="button" value="Organiser's ODO" onclick="addODO();">
+			<input type="button" value="Fix Average Speed" onclick="avgSpeedFix();">
+			<input type="button" value="Save Table" onclick="doSave();">
+		</div>
+		
+		<div id="buttons">
+			<input type="button" value="Calculate" onclick="gblCalcClicked=true; printResults();">
+			<input type="button" value="Change Average Speed" onclick="saveAvgSpeed();">
+			<input type="button" value="Add Check" onclick="addCheck();">
+			<input type="button" value="Add Manned Check" onclick="addManCheck();">
+			<input type="button" value="Add X-Board" onclick="addXBoard();">
+			<input type="button" value="Add Minute" onclick="addMinute();">
+			<input type="button" value="Add Mileage" onclick="addMileage();">
+		</div>
+		
+		<div id="outputs">			
+			<div id="clock">
+				<input type="button" value="Start Clock" onclick="this.disabled=true; clockButton();">
+				<p id="clockText">00:00:00</p>
+				<div id="clockDispBtns">
+					<label for="24hr"><input type="radio" name="clockDisp" id="24hr" value="24hr" checked>24hr</label>
+					<label for="12hr"><input type="radio" name="clockDisp" id="12hr" value="12hr">12hr</label>
+				</div>
+			</div>
+
+			<div id="time">
+				<h2 id="calcTime">00:00:00</h2>
+			</div>
+		</div>
+		
+		<div id="resultTable">
+			<table id="resultTable_table">
+				<thead>
+					<tr>
+						<th>Location</th>						
+						<th>ODO</th>
+						<th>Ideal Time</th>
+						<th>Actual Time</th>
+						<th>Average Speed</th>
+						<th>Checks</th>
+						<th>Mins Added</th>
+						<th>Kms Added</th>
+					</tr>
+				</thead>
+				<tbody id="resultTable_tbody">
+				</tbody>
+			</table>
+		</div>
+	</main>
+	
+	<script>go();</script>
+</body>
+</html>
